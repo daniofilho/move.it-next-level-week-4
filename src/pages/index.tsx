@@ -8,10 +8,8 @@ export default function Login() {
   const [login, setLogin] = useState("");
 
   const handleLogin = useCallback(() => {
-    if (login) {
-      location.href = `/home/${login}`;
-    }
-  }, []);
+    if (login) location.href = `/home/${login}`;
+  }, [login]);
 
   return (
     <div className={styles.container}>

@@ -1,0 +1,54 @@
+.container {
+  background-color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.container > div {
+  padding: 10px;
+}
+
+.container span {
+  color: var(--blue);
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.position {
+  justify-content: center;
+  border-right: 5px solid var(--background);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user > img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.user div {
+  margin-left: 1.5rem;
+}
+
+.user div strong {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--title);
+  text-transform: none;
+}
+
+.user div p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.user div p img {
+  margin-right: 0.5rem;
+}

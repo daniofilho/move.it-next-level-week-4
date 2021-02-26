@@ -1,18 +1,16 @@
 import { useCallback, useState } from "react";
 
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 import styles from "../styles/pages/Login.module.css";
 
 export default function Login() {
-  const router = useRouter();
-
   const [login, setLogin] = useState("");
 
   const handleLogin = useCallback(() => {
-    if (login && login !== "") {
-      router.push(`/home/${login}`);
+    if (login) {
+      console.log("ss");
+      location.href = `/home/${login}`;
     }
   }, []);
 

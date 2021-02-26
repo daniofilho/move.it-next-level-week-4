@@ -1,6 +1,14 @@
-import { createContext, useState, ReactNode, useEffect } from "react";
+import {
+  createContext,
+  useState,
+  ReactNode,
+  useEffect,
+  useCallback,
+} from "react";
 
-import Cookies from "js-cookie";
+import axios from "axios";
+
+// import Cookies from "js-cookie";
 
 import challenges from "../../challenges.json";
 import { LevelUpModal } from "../components/LevelUpModal";
@@ -56,16 +64,23 @@ export function ChallengesProvider({
 
   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
 
-  const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
+  const experienceToNextLevel = Math.pow((level + 1) * 8, 2);
 
   useEffect(() => {
     Notification.requestPermission();
   }, []);
 
   useEffect(() => {
-    Cookies.set("level", level.toString());
-    Cookies.set("currentExperience", currentExperience.toString());
-    Cookies.set("challengesCompleted", challengesCompleted.toString());
+    // update user data
+    axios.put(`${process.env.NEXT_PUBLIC_API_URL}/user`, {
+      login: data.userLogin,
+      experience: currentExperience,
+      challengesCompleted,
+      level,
+    });
+    //Cookies.set("level", level.toString());
+    //Cookies.set("currentExperience", currentExperience.toString());
+    //Cookies.set("challengesCompleted", challengesCompleted.toString());
   }, [level, currentExperience, challengesCompleted]);
 
   function levelUp() {

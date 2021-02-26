@@ -12,6 +12,9 @@ interface Challenge {
 }
 
 interface ChallengesContextData {
+  userLogin: string;
+  userName: string;
+  userAvatar: string;
   level: number;
   currentExperience: number;
   challengesCompleted: number;
@@ -26,6 +29,9 @@ interface ChallengesContextData {
 
 interface ChallengesProviderProps {
   data: {
+    userLogin: string;
+    userName: string;
+    userAvatar: string;
     level: number;
     currentExperience: number;
     challengesCompleted: number;
@@ -110,6 +116,9 @@ export function ChallengesProvider({
   return (
     <ChallengesContext.Provider
       value={{
+        userLogin: data.userLogin,
+        userName: data.userName,
+        userAvatar: data.userAvatar,
         level,
         currentExperience,
         experienceToNextLevel,

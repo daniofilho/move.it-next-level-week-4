@@ -1,0 +1,93 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("/login-background.jpg");
+  background-size: cover;
+  background-position: left;
+
+  display: flex;
+}
+
+.container article {
+  flex: 1;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (min-width: 991px) {
+  .container aside {
+    max-width: 50%;
+  }
+}
+
+.container aside h1 {
+  font-size: 2rem;
+  color: var(--white);
+  margin: 20px 0;
+}
+
+.container aside p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  max-width: 60%;
+
+  color: #b2b9ff;
+  margin-bottom: 30px;
+}
+
+.container aside > img {
+  margin-bottom: 50px;
+}
+
+.container aside p img {
+  margin-right: 20px;
+}
+
+.container aside footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.container aside input,
+.container aside input:hover,
+.container aside input:focus,
+.container aside input:active {
+  background: linear-gradient(90deg, #4953b8 0%, rgba(73, 83, 184, 0.2) 100%);
+  border: 0;
+  color: #fff;
+  padding: 15px;
+  outline: 0;
+  font-size: 1rem;
+}
+
+.container aside button {
+  background-color: var(--green);
+  padding: 15px;
+  border: 0;
+}
+
+@media (max-width: 991px) {
+  .container aside > img {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+  .container aside h1 {
+    text-align: center;
+  }
+  .container aside p {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .container aside footer {
+    justify-content: center;
+  }
+}

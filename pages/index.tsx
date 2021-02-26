@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 
 import Head from "next/head";
 
-import styles from "../styles/pages/Login.module.css";
+import styles from "../src/styles/pages/Login.module.css";
 
 export default function Login() {
   const [login, setLogin] = useState("");

@@ -4,18 +4,18 @@ import axios from "axios";
 
 import { GetServerSideProps } from "next";
 
-import { ExperienceBar } from "../../components/ExperienceBar";
-import { Profile } from "../../components/Profile";
-import { CompletedChallenges } from "../../components/CompletedChallenges";
-import { Countdown } from "../../components/Countdown";
-import { ChallengeBox } from "../../components/ChallengeBox";
+import { ExperienceBar } from "../../src/components/ExperienceBar";
+import { Profile } from "../../src/components/Profile";
+import { CompletedChallenges } from "../../src/components/CompletedChallenges";
+import { Countdown } from "../../src/components/Countdown";
+import { ChallengeBox } from "../../src/components/ChallengeBox";
 
-import { Sidebar } from "../../components/Sidebar";
+import { Sidebar } from "../../src/components/Sidebar";
 
-import { CountdownProvider } from "../../contexts/CountdownContext";
-import { ChallengesProvider } from "../../contexts/ChallengesContexts";
+import { CountdownProvider } from "../../src/contexts/CountdownContext";
+import { ChallengesProvider } from "../../src/contexts/ChallengesContexts";
 
-import styles from "../../styles/pages/Home.module.css";
+import styles from "../../src/styles/pages/Home.module.css";
 
 interface HomeProps {
   userLogin: string;

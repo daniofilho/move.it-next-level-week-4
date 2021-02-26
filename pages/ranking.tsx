@@ -4,10 +4,10 @@ import axios from "axios";
 
 import { GetServerSideProps } from "next";
 
-import { Sidebar } from "../components/Sidebar";
-import { User } from "../components/User";
+import { Sidebar } from "../src/components/Sidebar";
+import { User } from "../src/components/User";
 
-import styles from "../styles/pages/Ranking.module.css";
+import styles from "../src/styles/pages/Ranking.module.css";
 
 interface User {
   login: string;

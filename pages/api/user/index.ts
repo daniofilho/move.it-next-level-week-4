@@ -2,11 +2,11 @@ import { NowRequest, NowResponse } from "@vercel/node";
 
 import Cors from "cors";
 
-import middleware from "../../../../middleware";
+import middleware from "../../../middleware";
 
-import dbConnect from "../../../../server/utils/dbConnect";
+import dbConnect from "../../../server/utils/dbConnect";
 
-import User from "../../../../server/models/user";
+import User from "../../../server/models/user";
 
 // Initialize the cors middleware
 const cors = middleware(

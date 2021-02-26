@@ -25,8 +25,9 @@ export default async (
   await cors(req, res);
 
   try {
-    const users = await User.find({}).sort({ level: "desc" });
-    res.status(200).json({ success: true, data: users });
+    const user = await User.findOne({ login: req.query.login });
+
+    res.status(200).json({ success: true, data: user });
   } catch (error) {
     res.status(400).json({ success: false });
   }

@@ -9,7 +9,6 @@ export default function Login() {
 
   const handleLogin = useCallback(() => {
     if (login) {
-      console.log("ss");
       location.href = `/home/${login}`;
     }
   }, []);
